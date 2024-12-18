@@ -14,4 +14,6 @@ fn main() {
         }
         age
     }
+    let age = age_calculator(1995, 6, 3);
+    println!("Age: {}", age);
 }
