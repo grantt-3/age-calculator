@@ -1,3 +1,6 @@
+use chrono::{DateTime, Local, NaiveDateTime, Utc};
+use std::time::SystemTime;
+
 fn main() {
     println!("Hello, world!");
     fn age_calculator(year: i32, month: i32, day: i32) -> i32 {
@@ -16,4 +19,8 @@ fn main() {
     }
     let age = age_calculator(1995, 6, 3);
     println!("Age: {}", age);
+
+    let date = SystemTime::now();
+    let now: DateTime<Utc> = date.into();
+    println!("{:?}", now);
 }
